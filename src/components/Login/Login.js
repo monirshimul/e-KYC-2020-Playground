@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import './login.css';
+import { Link, useHistory } from 'react-router-dom';
 
 
 
-function Login() {
+function Login({ name, password }) {
     const [user, setUser] = useState({ name: "", password: "" })
+    let history = useHistory();
 
     const onFormSubmit = e => {
         e.preventDefault();
         console.log(user)
+        console.log(name)
+        console.log(password)
     }
 
     return (
@@ -16,7 +20,7 @@ function Login() {
         <div className="" id="loginBg" >
 
             <div className="col-sm-5" id="leftContent" >
-                <h1 className="display-1 text-white" style={{ fontFamily: "'Bebas Neue', cursive" }}>Lo<span style={{ color: "#b7472a" }}>g</span>in</h1>
+                <h1 className="display-1 text-white" style={{ fontFamily: "'Bebas Neue', cursive" }}>Lo<span style={{ color: "#c72c41" }}>g</span>in</h1>
                 <h1 className="display-4" style={{ fontFamily: "'Poiret One', cursive", color: "#3a3535" }}>Lorem ipsum dolor sit amet <span style={{ color: "#fff" }}>consectetur</span> adipisicing elit.</h1>
             </div>
             <div className="col-sm-5" id="formHolder">
@@ -36,7 +40,9 @@ function Login() {
 
                     <div className="d-flex justify-content-center" >
 
-                        <button className="btn mb-3" id="loginBtn" style={{ borderRadius: "50px", minWidth: "100px" }}>Login</button>
+                        <button onClick={() => history.push("/dashboard")} className="btn mb-3" id="loginBtn" style={{ borderRadius: "50px", minWidth: "100px" }}>Login</button>
+
+                        {/* <Link to="/dashboard" className="btn mb-3" id="loginBtn" style={{ borderRadius: "50px", minWidth: "100px" }}>Login</Link> */}
                     </div>
 
                 </form>
