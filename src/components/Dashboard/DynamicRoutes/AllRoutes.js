@@ -12,7 +12,7 @@ export const RouteName = [
     {
         "id": 1,
         "featureName": "MultiForm",
-        "path": "/",
+        "path": "/MultiForm",
         "exact": true,
         "component": <MultiForm />
     },

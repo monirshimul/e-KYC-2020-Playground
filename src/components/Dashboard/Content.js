@@ -18,7 +18,7 @@ function Content() {
     return (
         <Router>
             <div className="col" style={{ margin: "0", padding: "0" }}>
-                <Navbar />
+
                 <div className="container" style={{ marginTop: "100px" }}>
 
                     <div className=" row d-flex justify-content-between">
